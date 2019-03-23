@@ -4,11 +4,11 @@ import {
     Platform,
     ScrollView,
     StyleSheet,
-    Text,
     TouchableOpacity,
     View,
 } from 'react-native';
 import Leaderboard from 'react-native-leaderboard';
+import {Container, Text} from 'native-base';
 import { MonoText } from '../components/StyledText';
 
 export default class LeaderScreen extends React.Component {
@@ -38,9 +38,13 @@ export default class LeaderScreen extends React.Component {
 
     render() {
         return (
+            <Container>
+            <Text>Get tested so that your neighborhood can be #1!!</Text>
             <Leaderboard
                 data={this.state.data}
                 sortBy='highScore'
-                labelBy='userName' />)
+                labelBy='userName' />
+            </Container>
+        )
     }
 };

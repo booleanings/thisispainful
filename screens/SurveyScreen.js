@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Text} from 'native-base';
 import { View, StyleSheet, Button, ScrollView } from 'react-native';
 
 import t from 'tcomb-form-native';
@@ -64,21 +65,24 @@ export default class SurveyScreen extends Component {
   handleSubmit = () => {
     const value = this._form.getValue();
     console.log('value: ', value);
+    const { navigate } = this.props.navigation;
+    navigate('Home');
   }
 
   render() {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+         <Button
+      onPress={() => this.showText() } 
+      title="Search!"
+      color="#841584" />
         <Form
           ref={c => this._form = c}
           type={User}
           options={options}
         />
-        <Button
-      onPress={() => this.showText() } 
-      title="Search!"
-      color="#841584" />
-     {this.state.printText && <Text>  </Text> }
+       
+     
 </ScrollView>
       
     );
@@ -98,5 +102,6 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: 30,
+    padding: 20
   },
 });

@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Text, Icon, Right } from 'native-base';
+import { Container, Button, Header, Content, Card, CardItem, Body, Text } from 'native-base'
 import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
@@ -20,7 +20,6 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
             <Image
@@ -32,50 +31,73 @@ export default class HomeScreen extends React.Component {
               style={styles.welcomeImage}
             />
           </View>
+          
+          <Content>
+            <Card>
+              <CardItem header>
+              <Text>
+              About STDomination
+              </Text>
+              </CardItem>
+              <CardItem>
+                <Text>
+                Sexually Transmitted Diseases have become rampant within Charlotte, NC. 
+                This app aimed to inspire and incentivze the community community with a way to go out and get tested. 
+                With STDomination, users can truly see just how many fellow citizens have also gone to get treated and
+                what options are available to you. Those who have successfully confirmed their screenings will 
+                receive a voucher that will be used in a monthly lottery.
+                </Text>
+              </CardItem>
+              <CardItem>
+                <Body>
 
-          <View style={styles.getStartedContainer}>
-
-            <Text style={styles.getStartedText}>Welcome ato STDomination</Text>
-
-            <Text style={styles.getStartedText}>
-              Sexually Transmitted Diseases have become rampant within Charlotte, NC. This app aimed to inspire and incentivze the community with a way to go out and get tested. With STDomination, users can truly see just how many fellow citizens have also gone to get treated and what options are available to you. Those who have successfully confirmed their screenings will receive a voucher that will be used in a monthly lottery.
-            </Text>
-<<<<<<< HEAD
-           
-            <Container>
+                </Body>
+              </CardItem>
+            </Card>
+          </Content>
+        <Container style={{width: "100%"}}>
         <Content>
           <Card>
+            <CardItem header>
+              <Text>Updates</Text>
+            </CardItem>
             <CardItem>
-              <Icon active name="logo-googleplus" />
-              <Text>Google Plus</Text>
-              <Right>
-                <Icon name="arrow-forward" />
-              </Right>
-             </CardItem>
-             <CardItem>
-              <Icon active name="logo-googleplus" />
-              <Text>Google Plus</Text>
-              <Right>
-                <Icon name="arrow-forward" />
-              </Right>
-             </CardItem>
-           </Card>
+              <Body>
+              <Text>
+                      <Text>There are </Text>
+                      <Text style={{fontWeight: "bold"}}>246</Text>
+                      <Text> people in your neighborhood that have been tested.
+                </Text>
+                    </Text>
+              </Body>
+            </CardItem>
+            <CardItem>
+              <Body>
+                
+                <Text>
+                       <Text> It's been</Text>
+                      <Text style={{fontWeight: "bold"}}> 4 </Text>
+                      <Text>4 months since your last STI/
+                  STD test screening. Maybe you should make an appointment?
+                  
+                </Text> 
+                </Text>
+                <CardItem footer>
+                    <Button>
+                      <Text>
+                        Hi
+                      </Text>
+                </Button>
+            </CardItem>
+              </Body>
+            </CardItem>
+            <CardItem footer>
+              <Text>GeekyAnts</Text>
+            </CardItem>
+         </Card>
         </Content>
       </Container>
-          </View>
-         
-=======
-
-            <Text style={styles.getStartedText}>
-              To see how many people around you have already been to treatment in the past month, enter your zip code below.
-            </Text>
-            <View style={{ backgroundColor: 'black' }}>
-              <TextInput style={{ backgroundColor: 'gray', height: 80 }} />
-            </View>
-          </View>
->>>>>>> a314a2df1ab8a30808b8a569d3f323315a0a3ace
         </ScrollView>
-      </View>
     );
   }
 

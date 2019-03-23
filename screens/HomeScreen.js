@@ -31,7 +31,7 @@ export default class HomeScreen extends React.Component {
               style={styles.welcomeImage}
             />
           </View>
-          
+
           <Content>
             <Card>
               <CardItem header>

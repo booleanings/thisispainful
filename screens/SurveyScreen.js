@@ -50,14 +50,14 @@ const options = {
 };
 
 export default class SurveyScreen extends Component {
-    constructor () {
-        super();
-        this.state = {printText:false};
-     } 
-     
-     showText = () => {
-        this.setState({printText:true});
-     }
+  constructor() {
+    super();
+    this.state = { printText: false };
+  }
+
+  showText = () => {
+    this.setState({ printText: true });
+  }
 
   static navigationOptions = {
     title: 'Survey',
@@ -71,20 +71,34 @@ export default class SurveyScreen extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
          <Button
       onPress={() => this.showText() } 
       title="Search!"
       color="#841584" />
+=======
+      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+>>>>>>> 2e690ce5723112da2d80623b1b44a6b00074b41e
         <Form
           ref={c => this._form = c}
           type={User}
           options={options}
         />
+<<<<<<< HEAD
        
      
 </ScrollView>
       
+=======
+        <Button
+          onPress={() => this.showText()}
+          title="Search!"
+          color="#841584" />
+        {this.state.printText && <Text>  </Text>}
+      </ScrollView>
+
+>>>>>>> 2e690ce5723112da2d80623b1b44a6b00074b41e
     );
   }
 }

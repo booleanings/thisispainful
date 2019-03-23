@@ -32,7 +32,7 @@ export default class LotteryScreen extends React.Component {
 
                 </ScrollView>
 
-               
+
             </View>
         );
     }

@@ -28,7 +28,7 @@ export default class LeaderScreen extends React.Component {
                 { userName: 'Belmont', highScore: 156 },
                 { userName: 'Cornelius', highScore: 64 },
                 { userName: 'Pineville', highScore: 132 },
-                { userName: 'Kannapolis', highScore: 202 },
+                { userName: 'Kannapogis', highScore: 202 },
                 { userName: 'Huntersville', highScore: 101 },
                 { userName: '3rd Ward', highScore: 253 },                //...
             ]

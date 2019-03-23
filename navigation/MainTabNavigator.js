@@ -66,7 +66,7 @@ SurveyStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-check' : 'md-check'}
+      name={Platform.OS === 'ios' ? 'ios-list' : 'md-check'}
     />
   ),
 };

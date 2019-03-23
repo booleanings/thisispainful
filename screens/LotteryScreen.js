@@ -32,13 +32,7 @@ export default class LotteryScreen extends React.Component {
 
                 </ScrollView>
 
-                <View style={styles.tabBarInfoContainer}>
-                    <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
-
-                    <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-                        <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
-                    </View>
-                </View>
+               
             </View>
         );
     }

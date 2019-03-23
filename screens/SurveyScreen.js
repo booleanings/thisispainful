@@ -49,28 +49,39 @@ const options = {
 };
 
 export default class SurveyScreen extends Component {
+    constructor () {
+        super();
+        this.state = {printText:false};
+     } 
+     
+     showText = () => {
+        this.setState({printText:true});
+     }
+
   static navigationOptions = {
     title: 'Survey',
   };
   handleSubmit = () => {
     const value = this._form.getValue();
     console.log('value: ', value);
-    this.props.navigation.navigate('HomeScreen');
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Button
-          title="Sign Up!"
-          onPress={this.handleSubmit}
-        />
         <Form
           ref={c => this._form = c}
           type={User}
           options={options}
         />
+        <Button
+      onPress={() => this.showText() } 
+      title="Search!"
+      color="#841584" />
+     {this.state.printText && <Text>  </Text> }
       </View>
+
+      
     );
   }
 }

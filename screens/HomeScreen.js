@@ -44,13 +44,10 @@ export default class HomeScreen extends React.Component {
             <Text style={styles.getStartedText}>
               To see how many people around you have already been to treatment in the past month, enter your zip code below.
             </Text>
-
+            <View style={{ backgroundColor: 'black' }}>
+              <TextInput style={{ backgroundColor: 'gray', height: 80 }} />
+            </View>
           </View>
-          <TextInput
-            keyboardType='numeric'
-            // value={this.state.myNumber}
-            maxLength={10}  //setting limit of input
-          />
         </ScrollView>
       </View>
     );

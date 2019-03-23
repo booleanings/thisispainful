@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Button } from 'react-native';
+import { View, StyleSheet, Button, ScrollView } from 'react-native';
 
 import t from 'tcomb-form-native';
 
@@ -60,17 +60,19 @@ export default class SurveyScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Button
-          title="Sign Up!"
-          onPress={this.handleSubmit}
-        />
-        <Form
-          ref={c => this._form = c}
-          type={User}
-          options={options}
-        />
-      </View>
+      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+        <View style={styles.container}>
+          <Button
+            title="Sign Up!"
+            onPress={this.handleSubmit}
+          />
+          <Form
+            ref={c => this._form = c}
+            type={User}
+            options={options}
+          />
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -81,5 +83,12 @@ const styles = StyleSheet.create({
     marginTop: 50,
     padding: 20,
     backgroundColor: '#ffffff',
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  contentContainer: {
+    paddingTop: 30,
   },
 });

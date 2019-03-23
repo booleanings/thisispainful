@@ -5,6 +5,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -13,13 +14,6 @@ import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      isTested: false,
-      getStartedTextbox: "Get tested today"
-    };
-  }
   static navigationOptions = {
     header: null,
   };
@@ -40,35 +34,24 @@ export default class HomeScreen extends React.Component {
           </View>
 
           <View style={styles.getStartedContainer}>
-            {this._maybeRenderDevelopmentModeWarning()}
 
-            <Text style={styles.getStartedText}>Welcome to STDomination</Text>
+            <Text style={styles.getStartedText}>Welcome ato STDomination</Text>
 
-            <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-              <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
-            </View>
+            <Text style={styles.getStartedText}>
+              Sexually Transmitted Diseases have become rampant within Charlotte, NC. This app aimed to inspire and incentivze the community with a way to go out and get tested. With STDomination, users can truly see just how many fellow citizens have also gone to get treated and what options are available to you. Those who have successfully confirmed their screenings will receive a voucher that will be used in a monthly lottery.
+            </Text>
 
-            <Text
-               style={[styles.getStartedText, (this.state.isTested ? styles.tested : styles.notTested)]}>
-                {this.state.getStartedTextbox}
-              </Text>
+            <Text style={styles.getStartedText}>
+              To see how many people around you have already been to treatment in the past month, enter your zip code below.
+            </Text>
+
           </View>
-          
-
-          <View style={styles.helpContainer}>
-            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
-            </TouchableOpacity>
-          </View>
+          <TextInput
+            keyboardType='numeric'
+            // value={this.state.myNumber}
+            maxLength={10}  //setting limit of input
+          />
         </ScrollView>
-
-        <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
-
-          <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-            <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
-          </View>
-        </View>
       </View>
     );
   }
@@ -194,10 +177,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
-  notTested: {
-    color: 'red'
-  },
-  tested: {
-    color: 'green'
-  }
 });

@@ -11,12 +11,16 @@ import MapView, { MAP_TYPES, PROVIDER_DEFAULT, ProviderPropType, UrlTile } from 
 const { width, height } = Dimensions.get('window');
 
 const ASPECT_RATIO = width / height;
-const LATITUDE = 37.78825;
-const LONGITUDE = -122.4324;
+const LATITUDE = 35.2225;
+const LONGITUDE = 80.8410;
 const LATITUDE_DELTA = 0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
 class MapScreen extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
+
   constructor(props, context) {
     super(props, context);
 
@@ -51,11 +55,6 @@ class MapScreen extends React.Component {
             zIndex={-1}
           />
         </MapView>
-        <View style={styles.buttonContainer}>
-          <View style={styles.bubble}>
-            <Text>Custom Tiles</Text>
-          </View>
-        </View>
       </View>
     );
   }

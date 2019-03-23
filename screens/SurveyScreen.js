@@ -5,10 +5,10 @@ import t from 'tcomb-form-native';
 
 const Form = t.form.Form;
 const Gender = t.enums({
-    M: 'Male',
-    F: 'Female'
-  });
-  
+  M: 'Male',
+  F: 'Female'
+});
+
 const User = t.struct({
   name: t.String,
   zipCode: t.Number,
@@ -49,22 +49,25 @@ const options = {
 };
 
 export default class SurveyScreen extends Component {
+  static navigationOptions = {
+    title: 'Survey',
+  };
   handleSubmit = () => {
     const value = this._form.getValue();
     console.log('value: ', value);
     this.props.navigation.navigate('HomeScreen');
   }
-  
+
   render() {
     return (
       <View style={styles.container}>
-       <Button
+        <Button
           title="Sign Up!"
           onPress={this.handleSubmit}
         />
-        <Form 
+        <Form
           ref={c => this._form = c}
-          type={User} 
+          type={User}
           options={options}
         />
       </View>

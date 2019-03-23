@@ -14,7 +14,7 @@ import { MonoText } from '../components/StyledText';
 
 export default class LotteryScreen extends React.Component {
     static navigationOptions = {
-        header: null,
+        title: "Lottery",
     };
 
     render() {

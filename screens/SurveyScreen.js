@@ -71,6 +71,9 @@ export default class SurveyScreen extends Component {
             type={User}
             options={options}
           />
+          <Button
+            title="Submit"
+          />
         </View>
       </ScrollView>
     );

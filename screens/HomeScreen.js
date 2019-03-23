@@ -26,8 +26,8 @@ export default class HomeScreen extends React.Component {
             <Image
               source={
                 __DEV__
-                  ? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
+                  ? require('../assets/images/crown.png')
+                  : require('../assets/images/crown.png')
               }
               style={styles.welcomeImage}
             />
@@ -35,18 +35,15 @@ export default class HomeScreen extends React.Component {
 
           <View style={styles.getStartedContainer}>
 
-            <Text style={styles.getStartedText}>Welcome ato STDomination</Text>
+            <Text style={styles.getStartedText}>Welcome to STDomination{"\n"}</Text>
 
             <Text style={styles.getStartedText}>
-              Sexually Transmitted Diseases have become rampant within Charlotte, NC. This app aimed to inspire and incentivze the community with a way to go out and get tested. With STDomination, users can truly see just how many fellow citizens have also gone to get treated and what options are available to you. Those who have successfully confirmed their screenings will receive a voucher that will be used in a monthly lottery.
+              Sexually Transmitted Diseases have become rampant within Charlotte, NC. This app aimed to inspire and incentivze the community with a way to go out and get tested. With STDomination, users can truly see just how many fellow citizens have also gone to get treated and what options are available to you. Those who have successfully confirmed their screenings will receive a voucher that will be used in a monthly lottery.{"\n"}
             </Text>
 
             <Text style={styles.getStartedText}>
-              To see how many people around you have already been to treatment in the past month, enter your zip code below.
+              To see how many people around you have already been to treatment in the past month, enter your zip code below.{"\n"}
             </Text>
-            <View style={{ backgroundColor: 'black' }}>
-              <TextInput style={{ backgroundColor: 'gray', height: 80 }} />
-            </View>
           </View>
         </ScrollView>
       </View>
@@ -174,4 +171,13 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
+  textAreaContainer: {
+    borderColor: "black",
+    borderWidth: 1,
+  },
+  textArea: {
+    height: 26,
+    width: 100,
+    justifyContent: "flex-start"
+  }
 });

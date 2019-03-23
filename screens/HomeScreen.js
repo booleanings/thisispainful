@@ -40,6 +40,7 @@ export default class HomeScreen extends React.Component {
             <Text style={styles.getStartedText}>
               Sexually Transmitted Diseases have become rampant within Charlotte, NC. This app aimed to inspire and incentivze the community with a way to go out and get tested. With STDomination, users can truly see just how many fellow citizens have also gone to get treated and what options are available to you. Those who have successfully confirmed their screenings will receive a voucher that will be used in a monthly lottery.
             </Text>
+<<<<<<< HEAD
            
             <Container>
         <Content>
@@ -63,6 +64,16 @@ export default class HomeScreen extends React.Component {
       </Container>
           </View>
          
+=======
+
+            <Text style={styles.getStartedText}>
+              To see how many people around you have already been to treatment in the past month, enter your zip code below.
+            </Text>
+            <View style={{ backgroundColor: 'black' }}>
+              <TextInput style={{ backgroundColor: 'gray', height: 80 }} />
+            </View>
+          </View>
+>>>>>>> a314a2df1ab8a30808b8a569d3f323315a0a3ace
         </ScrollView>
       </View>
     );

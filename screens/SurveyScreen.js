@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Button } from 'react-native';
+import { View, StyleSheet, Button, ScrollView } from 'react-native';
 
 import t from 'tcomb-form-native';
 
@@ -68,7 +68,7 @@ export default class SurveyScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <Form
           ref={c => this._form = c}
           type={User}
@@ -79,8 +79,7 @@ export default class SurveyScreen extends Component {
       title="Search!"
       color="#841584" />
      {this.state.printText && <Text>  </Text> }
-      </View>
-
+</ScrollView>
       
     );
   }
@@ -92,5 +91,12 @@ const styles = StyleSheet.create({
     marginTop: 50,
     padding: 20,
     backgroundColor: '#ffffff',
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  contentContainer: {
+    paddingTop: 30,
   },
 });
